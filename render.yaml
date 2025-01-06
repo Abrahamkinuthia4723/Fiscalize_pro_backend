@@ -12,6 +12,6 @@ services:
       - key: DATABASE_URL
         value: sqlite:///fiscal_invoices.db
       - key: API_URL
-        value: http://127.0.0.1:5000
+        value: https://fiscalize-pro-backend.onrender.com
     healthCheckPath: /invoices
     plan: free
