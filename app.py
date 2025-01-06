@@ -128,4 +128,4 @@ def save_fiscal_data(invoice_id, qr_code_path, signature):
 
 if __name__ == '__main__':
     app = create_app()
-    app.run(debug=True)
+    
