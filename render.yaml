@@ -11,7 +11,7 @@ services:
         value: production
       - key: DATABASE_URL
         value: sqlite:///fiscal_invoices.db
-      - key: FISCAL_DEVICE_API_URL
-        value: http://127.0.0.1:5001/fiscalize
+      - key: API_URL
+        value: http://127.0.0.1:5000
     healthCheckPath: /invoices
     plan: free
