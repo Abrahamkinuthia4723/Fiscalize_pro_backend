@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: fiscalize-backend
+    env: python
+    region: oregon 
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn "app:create_app()"
+    autoDeploy: true
+    envVars:
+      - key: FLASK_ENV
+        value: production
+      - key: DATABASE_URL
+        value: sqlite:///fiscal_invoices.db  
+      - key: FISCAL_DEVICE_API_URL
+        value: http://127.0.0.1:5001/fiscalize
+    healthCheckPath: /invoices
+    plan: free  
